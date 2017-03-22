@@ -17,7 +17,6 @@ public class WebTest extends AbstractTest {
 	public void setup() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("testobject_device", TESTOBJECT_DEVICE);
-		capabilities.setCapability("testobject_api_key", TESTOBJECT_API_KEY_WEB);
 		capabilities.setCapability("testobject_app_id", TESTOBJECT_APP_ID_WEB);
 		capabilities.setCapability("testobject_appium_version", TESTOBJECT_APPIUM_VERSION);
 		capabilities.setCapability("testobject_cache_device", TESTOBJECT_CACHE_DEVICE);
@@ -39,7 +38,7 @@ public class WebTest extends AbstractTest {
 	}
 
 	@Test
-	public void openWebpageAndTakeScreenshot() {
+	public void openWebpage() {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 		String url = "http://adt01m2.mv.appa21.tsi-af.de/ui/web";
